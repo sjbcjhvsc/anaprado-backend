@@ -215,7 +215,7 @@ const fmt = n => `$${n.toLocaleString("es-CO")}`;
 
 // ── API helpers ─────────────────────────────────────────────
 async function apiPost(endpoint, body) {
-  const res = await fetch(`${API_BASE}${endpoint}`, {
+  const res = await fetch(`${API}${endpoint}`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body),
