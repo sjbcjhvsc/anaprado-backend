@@ -110,6 +110,11 @@ CORS_ALLOWED_ORIGINS = config(
 CORS_ALLOW_METHODS = ["GET", "POST", "OPTIONS"]
 CORS_ALLOW_HEADERS = ["content-type", "x-csrftoken", "accept"]
 
+CSRF_TRUSTED_ORIGINS = config(
+    "CSRF_TRUSTED_ORIGINS",
+    default="http://localhost:3000,http://localhost:5173",
+).split(",")
+
 # ──────────────────────────────────────────
 # PAYU – credenciales sandbox / producción
 # ──────────────────────────────────────────
@@ -149,3 +154,6 @@ import dj_database_url
 
 if database_url := config("DATABASE_URL", default=None):
     DATABASES["default"] = dj_database_url.parse(database_url)
+    
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
