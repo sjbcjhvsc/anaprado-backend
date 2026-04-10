@@ -11,6 +11,9 @@ class ContactoView(APIView):
     Recibe el formulario, valida y guarda en BD.
     """
 
+    def get(self, request):
+        return Response({"mensaje": "API contacto funcionando 🚀"})
+
     def post(self, request):
         serializer = MensajeContactoSerializer(data=request.data)
 
