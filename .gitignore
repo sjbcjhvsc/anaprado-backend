@@ -31,3 +31,9 @@ env/
 # OS
 .DS_Store
 Thumbs.db
+
+#NODE MODULES CREATED
+node_modules
+frontend/node_modules
+venv
+.env
