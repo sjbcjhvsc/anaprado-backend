@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 // ─── Cambia esta URL por la de tu servidor Django ───
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:8000";
+const API = import.meta.env.VITE_API_URL;
 
 const style = `
   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap');
